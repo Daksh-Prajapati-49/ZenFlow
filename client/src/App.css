@@ -1,0 +1,15 @@
+.App{
+  width : 100vw;
+  height : max(100vh,100%);
+}
+
+.tx{
+  font-size : 2em;
+  font-weight : bold;
+}
+
+.inpform {
+  width: max(400px, 40%);
+  min-width: 400px;
+  margin : 16px auto;
+}
