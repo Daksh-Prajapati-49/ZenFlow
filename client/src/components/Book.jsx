@@ -9,7 +9,7 @@ const Book = ({ item, data, setData, idx }) => {
         if (result) {
             // User clicked "OK" (Book)
             // console.log(process.env.REACT_APP_SERVER_URL);
-            axios.post('https://zenflowv4.onrender.com/api/users', data)
+            axios.post('https://zenflowv5.onrender.com/api/users', data)
                 .then((res) => {
                     console.log(res);
                     alert("Booking confirmed!");
