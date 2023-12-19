@@ -32,6 +32,8 @@ const enrollUser = async (req, res) => {
             { new: true } 
         );
 
+        req.body.timing = updatedBatch.timing;
+
         await sendConfirmationEmail(req.body); 
 
         res.status(200).json({ message: "User enrolled successfully", user: newUser, batch: updatedBatch });

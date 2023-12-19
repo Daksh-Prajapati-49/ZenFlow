@@ -20,7 +20,7 @@ async function sendConfirmationEmail(obj) {
             to: obj.email,               // Recipient's email address collected from the booking form
             subject: "Your Booking is confirmed",
             html: `
-            <h1>Hello,</h1>
+            <h2>Hello ${obj.name},</h2>
             <p>Your ZenFlow booking has been confirmed!</p>
             <p>Details of your booking:</p>
             <ul>
@@ -29,7 +29,7 @@ async function sendConfirmationEmail(obj) {
                 <li>Month: ${obj.month}</li>
                 <li>Year: ${obj.year}</li>
             </ul>
-            <p>Thank you for choosing our cab service. Have a great trip!</p>
+            <p>Thank you for choosing our platform. Have a great day!</p>
         `,
         });
 
