@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const Batch = require("../models/Batch");
-import sendEmail from "../utils/sendEmail";
+const sendEmail = require("../utils/sendEmail");
 
 
 const enrollUser = async (req, res) => {
