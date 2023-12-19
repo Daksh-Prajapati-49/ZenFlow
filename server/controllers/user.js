@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const Batch = require("../models/Batch");
+import sendEmail from "../utils/sendEmail";
 
 
 const enrollUser = async (req, res) => {
@@ -25,14 +26,13 @@ const enrollUser = async (req, res) => {
             year: req.body.year
         });
 
-        // Increment the count for the corresponding batch
         const updatedBatch = await Batch.findByIdAndUpdate(
             batchId,
             { $inc: { count: 1 } },
-            { new: true } // Return the updated batch
+            { new: true } 
         );
 
-        // sendEmail(req.body); // Uncomment if needed
+        sendEmail(req.body); 
 
         res.status(200).json({ message: "User enrolled successfully", user: newUser, batch: updatedBatch });
     } catch (err) {

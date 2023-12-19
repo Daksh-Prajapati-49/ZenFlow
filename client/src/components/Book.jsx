@@ -2,8 +2,8 @@ import React from 'react'
 import axios from 'axios';
 
 const Book = ({ item, data, setData, idx }) => {
-    const handleClick = () => {
-        setData({ ...data, batchId: item._id, month: item.month, year: item.year });
+    const handleClick = async () => {
+        await setData({ ...data, batchId: item._id, month: item.month, year: item.year });
         const result = window.confirm("Do you want to confirm booking?");
 
         if (result) {
