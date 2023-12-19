@@ -24,7 +24,7 @@ function App() {
       return;
     }
 
-    axios.get('https://zenflow-awb9.onrender.com/api/batch/')
+    axios.get('https://zenflowv3.onrender.com/api/batch/')
       .then((res) => {
         setError("");
         console.log(res.data.batch);
