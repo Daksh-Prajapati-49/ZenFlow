@@ -38,3 +38,5 @@ async function sendConfirmationEmail(obj) {
         console.error("Error sending confirmation email:", error);
     }
 }
+
+module.exports = { sendConfirmationEmail };

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const Batch = require("../models/Batch");
-const sendEmail = require("../utils/sendEmail");
+const { sendConfirmationEmail } = require("../utils/sendEmail");
 
 
 const enrollUser = async (req, res) => {
@@ -32,7 +32,7 @@ const enrollUser = async (req, res) => {
             { new: true } 
         );
 
-        sendEmail(req.body); 
+        await sendConfirmationEmail(req.body); 
 
         res.status(200).json({ message: "User enrolled successfully", user: newUser, batch: updatedBatch });
     } catch (err) {
