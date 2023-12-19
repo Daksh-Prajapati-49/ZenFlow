@@ -24,7 +24,7 @@ async function sendConfirmationEmail(obj) {
             <p>Your ZenFlow booking has been confirmed!</p>
             <p>Details of your booking:</p>
             <ul>
-                <li>Date-Time : ${Date.now}</li>
+                <li>Date-Time : ${new Date().toLocaleString()}</li>
                 <li>Timing: ${obj.timing}</li>
                 <li>Month: ${obj.month}</li>
                 <li>Year: ${obj.year}</li>
